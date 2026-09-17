@@ -7,6 +7,11 @@ viewMoreBtn.addEventListener('click', (e) => {
     e.preventDefault();
     renderHtml();
 })
+const hamburgerBtn = document.getElementById('hamburger-btn');
+hamburgerBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('mobile-nav').classList.toggle('hidden');
+})
 // convert data list to string HTML
 const getHtmlData = function() {
     let dataHtml = ''

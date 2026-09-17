@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 /* Header */
 
 header,
@@ -29,8 +28,23 @@ nav {
 
 nav ul {
     list-style: none;
+    display: none;
+
+}
+nav li {
+    display: inline-block;
 }
 
+.hamburger {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.hidden {
+    display: none;
+}
 /* Header - Typography */
 
 .site-header {
@@ -38,14 +52,24 @@ nav ul {
     letter-spacing: -0.03em;
 }
 
-nav a {
+.mobile-nav ul {
+    list-style: none;
+}
+
+.mobile-nav a{
     text-decoration: none;
     color: #080808;
     font-size: 0.75rem;
+    font-weight: bold;
 }
 
-nav a:first-of-type {
+nav li:first-of-type {
     margin-right: 2.58em;
+}
+
+.mobile-nav {
+    padding-bottom: 1em;
+    text-align: center;
 }
 
 /* Main */
@@ -97,9 +121,7 @@ h1 {
 }
 
 /* Blogs */
-.hidden {
-    display: none;
-}
+
 
 .recent-posts {
     font-size: 1rem;
@@ -177,12 +199,26 @@ footer p {
         font-size: 1.253rem;
     }
 
-    nav a {
-        font-size: 1rem;
+    nav ul {
+        display: flex;
     }
 
-    nav a:first-of-type {
+    nav a {
+        font-size: 1rem;
+        text-decoration: none;
+        color: #080808;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    nav li:first-of-type {
         margin-right: 1.938em;
+    }
+
+    .mobile-nav {
+        display: none;
     }
 
     /* Main */
@@ -217,9 +253,6 @@ footer p {
         height: 300px;
     }
 
-    .hidden {
-        display: block;
-    }
 
     /* Journey */
     .journey-container {
