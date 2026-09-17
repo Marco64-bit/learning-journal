@@ -19,5 +19,6 @@ function renderJourneyHtml() {
     journeySection.innerHTML = getJourneyHtml();
     journeySection.innerHTML += journeyDesc;
 }
+
 renderJourneyHtml();
 

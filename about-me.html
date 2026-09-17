@@ -18,15 +18,30 @@
 		<span class="site-header">My learning journal</span>
 	</div>
 	<nav>
+		<button class="hamburger" id="hamburger-btn">
+			<i class="fa-solid fa-bars"></i>
+		</button>
 		<ul>
 			<li>
-				<a href="./index.html">HOME</a>
+				<a href="index.html">HOME</a>
+			</li>
+			<li>
 				<a href="">ABOUT ME</a>
 			</li>
 		</ul>
 	</nav>
 </header>
 <main>
+	<div class="mobile-nav hidden" id="mobile-nav">
+		<ul>
+			<li>
+				<a href="index.html">HOME</a>
+			</li>
+			<li>
+				<a href="">ABOUT ME</a>
+			</li>
+		</ul>
+	</div>
 	<div class="about-me">
 		<img class="pfp" src="./images/pfp.jpg" alt="A person smiling with a purple and orange background.">
 		<div class="about-me-text">
@@ -66,6 +81,7 @@
 	</p>
 </footer>
 <script src="main.js" type="module"></script>
+<script src="https://kit.fontawesome.com/56946cdc82.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

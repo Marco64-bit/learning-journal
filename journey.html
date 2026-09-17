@@ -18,15 +18,30 @@
 		<span class="site-header">My learning journal</span>
 	</div>
 	<nav>
+		<button class="hamburger" id="hamburger-btn">
+			<i class="fa-solid fa-bars"></i>
+		</button>
 		<ul>
 			<li>
-				<a href="./index.html">HOME</a>
+				<a href="index.html">HOME</a>
+			</li>
+			<li>
 				<a href="./about-me.html">ABOUT ME</a>
 			</li>
 		</ul>
 	</nav>
 </header>
 <main>
+	<div class="mobile-nav hidden" id="mobile-nav">
+		<ul>
+			<li>
+				<a href="./index.html">HOME</a>
+			</li>
+			<li>
+				<a href="./about-me.html">ABOUT ME</a>
+			</li>
+		</ul>
+	</div>
 	<article class="journey-container" id="journey">
 
 		<h2>How I stay committed to learning</h2>
@@ -65,6 +80,7 @@
 	</p>
 </footer>
 <script src="journey.js" type="module"></script>
+<script src="https://kit.fontawesome.com/56946cdc82.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
