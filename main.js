@@ -37,11 +37,11 @@ const getHtmlData = function() {
 }
 
 // render HTML to the DOM
-export function renderHtml() {
+ function renderHtml() {
     document.getElementById('blogs').innerHTML += getHtmlData();
 }
 
-// Get HTML for the main journey
+// Get HTML for index
 function getJourneyHtml() {
     journeySection.style.background = `rgba(0, 0, 0, 0.7) url(${data[0].img})`;
     return `
@@ -52,10 +52,30 @@ function getJourneyHtml() {
     <p class="desc">${data[0].description}</p>`
 }
 
+// Load the main journey website
+const getMainJourneyHtml = function() {
+    return `
+        <p>
+            <time>${data[0].date}</time>
+        </p>
+        <h1>${data[0].title}</h1>
+        <p class="desc">${data[0].description}</p>
+        <img class="main-img" src="${data[0].img}"
+             alt="${data[0].title}">
+    `
+}
+
 function renderJourneyHtml() {
     journeySection.innerHTML = getJourneyHtml();
+}
+
+function renderMainJourneyHtml() {
+    const journeyDesc = journeySection.innerHTML
+    journeySection.innerHTML = getMainJourneyHtml();
+    journeySection.innerHTML += journeyDesc;
 }
 
 renderHtml();
 
 if (document.title === 'My Learning Journal') renderJourneyHtml();
+else if (document.title === 'New Journey') renderMainJourneyHtml();
