@@ -68,7 +68,6 @@ footer {
 
 .main-journey {
     padding: 5.438em 1.25em 0;
-    background: rgba(0, 0, 0, 0.5) url("../images/hero.png") center bottom;
     background-blend-mode: darken;
     background-size: cover;
     display: flex;
@@ -119,7 +118,7 @@ h1 {
     height: 232px;
     object-fit: cover;
     border-radius: 3px;
-
+    border: 10px solid darkslateblue;
 }
 
 .view-more {
@@ -135,6 +134,7 @@ h1 {
 
 .pfp {
     width: 182px;
+    border-radius: 50%;
 }
 
 .about-me {
