@@ -1,11 +1,16 @@
 import data from './data.js';
 
 const journeySection = document.getElementById('journey');
-
-// convert data list to string html
+let index = 1;
+const viewMoreBtn = document.getElementById('view-more');
+viewMoreBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    renderHtml();
+})
+// convert data list to string HTML
 const getHtmlData = function() {
     let dataHtml = ''
-    for (let i = 1; i < data.length; i++){
+    for (let i = index; i < data.length; i++){
         dataHtml += `
             <article>
                 <img src="${data[i].img}"
@@ -18,13 +23,17 @@ const getHtmlData = function() {
                 <a href="${data[i].link}" class="btn">${data[i].link}</a>
             </article>
         `
+        index++;
+        if (i % 6 === 0) break;
+        if (i === data.length - 1) viewMoreBtn.style.display = 'none';
     }
+
     return dataHtml
 }
 
-// render html to the DOM
+// render HTML to the DOM
 export function renderHtml() {
-    document.getElementById('blogs').innerHTML = getHtmlData();
+    document.getElementById('blogs').innerHTML += getHtmlData();
 }
 
 // Get HTML for the main journey

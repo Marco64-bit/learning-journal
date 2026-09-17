@@ -21,4 +21,3 @@ function renderJourneyHtml() {
 }
 renderJourneyHtml();
 
-renderHtml();
