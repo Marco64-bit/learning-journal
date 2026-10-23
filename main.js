@@ -62,6 +62,7 @@ const getMainJourneyHtml = function() {
         <p class="desc">${data[0].description}</p>
         <img class="main-img" src="${data[0].img}"
              alt="${data[0].title}">
+             <a href="${data[0].link}">${data[0].link}</a>
     `
 }
 
